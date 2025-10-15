@@ -82,11 +82,12 @@ int main()
 
     // load models
     // -----------
-    Model ourModel(FileSystem::getPath("resources/objects/backpack/backpack.obj"));
+    // Model model1(FileSystem::getPath("resources/objects/backpack/backpack.obj"));
 
+    Model ourModel("/home/frook/Downloads/hornet_-_hollow_knight_silksong.glb");
     
     // draw in wireframe
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+    // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     // render loop
     // -----------
@@ -123,6 +124,10 @@ int main()
         ourShader.setMat4("model", model);
         ourModel.Draw(ourShader);
 
+        // ourShader.setMat4("projection", projection);
+        // ourShader.setMat4("view", view);
+        // ourShader.setMat4("model", model);
+        // model1.Draw(ourShader);
 
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
